@@ -24,14 +24,14 @@ jobs:
 
       - name: Create .env File
         run: |
-          echo "OCI_USER_ID=${{ secrets.OCI_USER_OCID }}" >> .env
-          echo "OCI_TENANCY_ID=${{ secrets.OCI_TENANCY_OCID }}" >> .env
-          echo "OCI_REGION=${{ secrets.OCI_REGION }}" >> .env
-          echo "OCI_KEY_FINGERPRINT=${{ secrets.OCI_FINGERPRINT }}" >> .env
-          echo "OCI_SUBNET_ID=${{ secrets.OCI_SUBNET_OCID }}" >> .env
+          echo "OCI_USER_ID=ocid1.user.oc1..aaaaaaaadqa3itsoc3cxwyyjk4mos4o5tqtegm7j7xktzl2vhiqslotqamia" >> .env
+          echo "OCI_TENANCY_ID=ocid1.tenancy.oc1..aaaaaaaabfzjfg2dytvepao73ruuheb2edpn3jpfuju4ryqavhgcb7v5a7nq" >> .env
+          echo "OCI_REGION=ap-batam-1" >> .env
+          echo "OCI_KEY_FINGERPRINT=fc:a1:6e:a9:19:65:9f:cb:57:c2:d0:0d:ad:a2:ae:f7" >> .env
+          echo "OCI_SUBNET_ID=ocid1.subnet.oc1.ap-batam-1.aaaaaaaaje3hbjvqob443z3jipfwttggshiglblxv2fdmos7jygyzdoq4y6q" >> .env
           echo "OCI_PRIVATE_KEY_FILENAME=key.pem" >> .env
-          echo "OCI_OCPUS=${{ secrets.OCI_OCPUS }}" >> .env
-          echo "OCI_MEMORY=${{ secrets.OCI_MEMORY }}" >> .env
+          echo "OCI_OCPUS=2" >> .env
+          echo "OCI_MEMORY=6" >> .env
           echo "OCI_AVAILABILITY_DOMAIN=" >> .env
           echo "OCI_IMAGE_ID=" >> .env
 
