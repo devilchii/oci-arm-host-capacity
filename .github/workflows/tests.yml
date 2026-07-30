@@ -64,6 +64,7 @@ jobs:
           echo "OCI_MEMORY=6" >> .env
           echo "OCI_AVAILABILITY_DOMAIN=" >> .env
           echo "OCI_IMAGE_ID=" >> .env
+          echo "OCI_SSH_PUBLIC_KEY=GANTI_DENGAN_SSH_PUBLIC_KEY_ANDA_DISINI" >> .env
 
       - name: Install dependencies
         run: composer install
