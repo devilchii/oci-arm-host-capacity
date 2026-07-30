@@ -35,5 +35,6 @@ jobs:
           OCI_PRIVATE_KEY_FILENAME: key.pem
           OCI_OCPUS: ${{ secrets.OCI_OCPUS }}
           OCI_MEMORY: ${{ secrets.OCI_MEMORY }}
-          OCI_AVAILABILITY_DOMAIN: "AD-1"
+          OCI_AVAILABILITY_DOMAIN: ""
+          OCI_IMAGE_ID: ""
         run: php index.php
