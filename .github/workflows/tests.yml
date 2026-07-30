@@ -19,7 +19,36 @@ jobs:
 
       - name: Create Private Key File
         run: |
-          echo "${{ secrets.OCI_KEY_CONTENT }}" > key.pem
+          cat << 'EOF' > key.pem
+          -----BEGIN PRIVATE KEY-----
+          MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDh+qUZUOx+ATbL
+          UKbEaMPSNUct3685Ca+wxdzs+Kv30WFU9QokkluJzYD533ULEmxn/5JEovQmOjxM
+          wPgMkbV0RXG1Ok58bHjL3yDg0AKmhwCHO4L7b6uNpn8mmGRWYimPRGJRneZxJlLM
+          9ZoKkV4XuApxbYTuU+GEC0nmcd8fbz7DKygAMQh8v+VTHWmsLvlFztsiK3X5JBQ+
+          Ks2325hpAmPTeStlHpnTwXXWvNtNd02WdMikGozKi+T8e5BIwSDuK3aadUwpWX5Z
+          1PXmRN3uuGmcdcbISoWVFLLRKGW+Cum3MGqiycPfKgLKV9+CJNbw83XQvdEo7OXe
+          o1fW0FbHAgMBAAECggEAB1dOH7lqRVmivw4arMy+d8i1TD81AQRYicSTvbsCUyWh
+          JNJlBvUeNibP5s4kjjyF+wbpaINmrQs9RD0MkdP18hYDcKC5Rf98GRthhQwc2e4O
+          zVXYlnR1PT/IZ6eRsuCzeuz8yKv5fXmCPRhJbch1Jw4agL7PD7L344M+XlcaqXmz
+          DazV2yAdrywCV+N1RasTRIrdX9a2oDBpqyU0pzXbFKo6203D/ce3bJHOJh4deqcB
+          HPkUl7PTs2iRdFKM46AM8Ysx7SnnzB/myNXu4POlgYABq8X99MXOsW74gwNhHaU8
+          eXCgZ1ecUneDYqDpcQIcd3p/6CEFV8Ky7+reVAq0wQKBgQD2DBqwvS5Dy52t/+Mc
+          Tnous41HUv1OOg9zaN9NuRasNKWRxBzNOeV6N6EWnyXat0KdQNEqoh5zQn/LvCsz
+          s4hXGCIl1xn0ORjR99tnc1uOcdDsk17wTVxXyWRQYAQBtrwmA6v+oByjCOTtWgze
+          SSlDirNzYLz53IfojB4qf6yT5wKBgQDrHrptaAymt2xYSMpV42BEbLlZxFkGz6tu
+          gQTSEm2XIRYN4KGX0gl7cSvzAbBNVJ1UWbRDXqSDcDTgv+R6JFHZ4Jnpq7BcYkfH
+          WVnoC3ArZaKwKm/4qGlAw+neLNtER/TtdwW0Cl7E9gi9KY27XssPa6pCVPUAFmZZ
+          PC2cGJvKIQKBgBKwZK6cEBGSO83lq+iQhXNarBaI1TjF7DqF8sBCmNhHv3PNA6sL
+          BMU9yHyhZgyw8txi+gBVBB8ZI//jsRxiPK7w5FcfeZc1Zw871myLNJ8jQg1WPFXg
+          am04nOgGAwfmS3BPwxa6LrKrkEf/GQ8hW4MH3A2dgX0xJRmi2v+7Zu5tAoGAeBvn
+          cpJvvA8BiwwMSNnxyKKeAQx7yi32TmocU1BUqZqeUJKLGiqS63uBzw7yyF5MTNXS
+          b4P+mKKOcK22gurg4WOKXMN3QYp3TpAHjLGjKJgwBrx3HNizhAFRDE1v6a60oUZn
+          JHUTupxRFIkQvUIMi6EdhesuiU/oEvfZ+N7dXuECgYEAwNcMhWxOqwiyVfrSzFxu
+          Uo5icpeQRDxwe18DkmwpT3rc2wMfImBitYJKcTKKdxrS5+TelCt60y9Ka2P/8JMB
+          ubQybmCJ/OQZAu19bRE/SEgTJ3udd8MkErrQ8/CbmpC7xBpyTvPAjQuEVDGsKJYW
+          r0Sr0lPvNtAe153lTqAIMlw=
+          -----END PRIVATE KEY-----
+          EOF
           chmod 600 key.pem
 
       - name: Create .env File
