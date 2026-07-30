@@ -22,24 +22,21 @@ jobs:
           echo "${{ secrets.OCI_KEY_CONTENT }}" > key.pem
           chmod 600 key.pem
 
+      - name: Create .env File
+        run: |
+          echo "OCI_USER_ID=${{ secrets.OCI_USER_OCID }}" >> .env
+          echo "OCI_TENANCY_ID=${{ secrets.OCI_TENANCY_OCID }}" >> .env
+          echo "OCI_REGION=${{ secrets.OCI_REGION }}" >> .env
+          echo "OCI_KEY_FINGERPRINT=${{ secrets.OCI_FINGERPRINT }}" >> .env
+          echo "OCI_SUBNET_ID=${{ secrets.OCI_SUBNET_OCID }}" >> .env
+          echo "OCI_PRIVATE_KEY_FILENAME=key.pem" >> .env
+          echo "OCI_OCPUS=${{ secrets.OCI_OCPUS }}" >> .env
+          echo "OCI_MEMORY=${{ secrets.OCI_MEMORY }}" >> .env
+          echo "OCI_AVAILABILITY_DOMAIN=" >> .env
+          echo "OCI_IMAGE_ID=" >> .env
+
       - name: Install dependencies
         run: composer install
 
       - name: Execute OCI Auto Instance Script
-        env:
-          OCI_USER_ID: ${{ secrets.OCI_USER_OCID }}
-          OCI_TENANCY_ID: ${{ secrets.OCI_TENANCY_OCID }}
-          OCI_REGION: ${{ secrets.OCI_REGION }}
-          OCI_KEY_FINGERPRINT: ${{ secrets.OCI_FINGERPRINT }}
-          OCI_SUBNET_ID: ${{ secrets.OCI_SUBNET_OCID }}
-          OCI_PRIVATE_KEY_FILENAME: key.pem
-          OCI_OCPUS: ${{ secrets.OCI_OCPUS }}
-          OCI_MEMORY: ${{ secrets.OCI_MEMORY }}
-          OCI_AVAILABILITY_DOMAIN: ""
-          OCI_IMAGE_ID: ""
-        run: |
-          # Fallback jika OCI_REGION di secret belum/lupa diisi
-          if [ -z "$OCI_REGION" ]; then
-            export OCI_REGION="ap-singapore-1"
-          fi
-          php index.php
+        run: php index.php
