@@ -396,7 +396,7 @@ That's how you will login when instance will be created (notice opc default user
 ```bash
 ssh -i ~/.ssh/id_rsa opc@ip.add.re.ss
 ```
-
+ 
 If you didn't assign public IP, you can still copy internal FQDN or private IP (10.x.x.x) 
 from the instance details page and connect from your other instance in the same VNIC. e.g.
 
