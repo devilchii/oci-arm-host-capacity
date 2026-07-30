@@ -37,4 +37,9 @@ jobs:
           OCI_MEMORY: ${{ secrets.OCI_MEMORY }}
           OCI_AVAILABILITY_DOMAIN: ""
           OCI_IMAGE_ID: ""
-        run: php index.php
+        run: |
+          # Fallback jika OCI_REGION di secret belum/lupa diisi
+          if [ -z "$OCI_REGION" ]; then
+            export OCI_REGION="ap-singapore-1"
+          fi
+          php index.php
