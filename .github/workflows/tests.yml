@@ -59,6 +59,7 @@ jobs:
           echo "OCI_KEY_FINGERPRINT=fc:a1:6e:a9:19:65:9f:cb:57:c2:d0:0d:ad:a2:ae:f7" >> .env
           echo "OCI_SUBNET_ID=ocid1.subnet.oc1.ap-batam-1.aaaaaaaaje3hbjvqob443z3jipfwttggshiglblxv2fdmos7jygyzdoq4y6q" >> .env
           echo "OCI_PRIVATE_KEY_FILENAME=key.pem" >> .env
+          echo "OCI_SHAPE=VM.Standard.A1.Flex" >> .env
           echo "OCI_OCPUS=2" >> .env
           echo "OCI_MEMORY=6" >> .env
           echo "OCI_AVAILABILITY_DOMAIN=" >> .env
