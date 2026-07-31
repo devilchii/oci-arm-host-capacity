@@ -53,18 +53,20 @@ jobs:
 
       - name: Create .env File
         run: |
-          echo "OCI_USER_ID=ocid1.user.oc1..aaaaaaaadqa3itsoc3cxwyyjk4mos4o5tqtegm7j7xktzl2vhiqslotqamia" >> .env
-          echo "OCI_TENANCY_ID=ocid1.tenancy.oc1..aaaaaaaabfzjfg2dytvepao73ruuheb2edpn3jpfuju4ryqavhgcb7v5a7nq" >> .env
-          echo "OCI_REGION=ap-batam-1" >> .env
-          echo "OCI_KEY_FINGERPRINT=fc:a1:6e:a9:19:65:9f:cb:57:c2:d0:0d:ad:a2:ae:f7" >> .env
-          echo "OCI_SUBNET_ID=ocid1.subnet.oc1.ap-batam-1.aaaaaaaaje3hbjvqob443z3jipfwttggshiglblxv2fdmos7jygyzdoq4y6q" >> .env
-          echo "OCI_PRIVATE_KEY_FILENAME=key.pem" >> .env
-          echo "OCI_SHAPE=VM.Standard.A1.Flex" >> .env
-          echo "OCI_OCPUS=2" >> .env
-          echo "OCI_MEMORY=6" >> .env
-          echo "OCI_AVAILABILITY_DOMAIN=" >> .env
-          echo "OCI_IMAGE_ID=" >> .env
-          echo "OCI_SSH_PUBLIC_KEY=/"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAhsDy1Hx1N/QTyO2qVRWdBGnyxEHKEzg9z+aj2unmXH71d7l6u62lMOlQJw0OW/rV28NkBp86gbHpSLDrjM/aAukaaxbGgoVtwGRxmOgr8fGk8mYfNhJn1kkrRhmdUL4AZ37CiVigO8A8q+V7i2k9EV5W9+5augm3S3C1O1Yfs32/muPMjoKONl5rAXnLe6chfKfajPcbXJ3wfqHgx3gRwH/5mjB0VM4wfPpQnS6fSZKKERDZEB51TEubvpnzoTh+3MKXUk+xD13b16A0Q/zLSNdDxBAywtYQEGFN0qXBWsM6fCUNiiakOhyOeDlyDP7g3dH+B8P2/TzekqFY94tT home@IQBAL" >> .env
+          cat << 'EOF' > .env
+          OCI_USER_ID=ocid1.user.oc1..aaaaaaaadqa3itsoc3cxwyyjk4mos4o5tqtegm7j7xktzl2vhiqslotqamia
+          OCI_TENANCY_ID=ocid1.tenancy.oc1..aaaaaaaabfzjfg2dytvepao73ruuheb2edpn3jpfuju4ryqavhgcb7v5a7nq
+          OCI_REGION=ap-batam-1
+          OCI_KEY_FINGERPRINT=fc:a1:6e:a9:19:65:9f:cb:57:c2:d0:0d:ad:a2:ae:f7
+          OCI_SUBNET_ID=ocid1.subnet.oc1.ap-batam-1.aaaaaaaaje3hbjvqob443z3jipfwttggshiglblxv2fdmos7jygyzdoq4y6q
+          OCI_PRIVATE_KEY_FILENAME=key.pem
+          OCI_SHAPE=VM.Standard.A1.Flex
+          OCI_OCPUS=2
+          OCI_MEMORY=6
+          OCI_AVAILABILITY_DOMAIN=
+          OCI_IMAGE_ID=
+          OCI_SSH_PUBLIC_KEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDhDyH1X1N/QTy02qVRWdBGnyxEHKeZ9z+aj2unmXH71d716u621M01QJw0W/rv28NKbP86gbHpSLDrjM/aAukaaxbGgovVwGRxmOgr8fK8mYfNhJn1kkrRhdUL4AZ37CiVig08A8q+V7i2k9EW5W9+5augm3S3C101Yfs32/muPMjoKON15rAXnLe6chKfajPcBXJ3wfQhgX3GrWh/5jB0VM4wfPQnS6fZKKERDZEB51TeUbvpnzoTh+3MKXUk+xD13b16A0Q/zLSNdDxBAywTYQEFN0qXBsW6fCUNiiakOhYOeD1yDP7g3dH+B8P2/TzekqFY94tT home@IQBAL
+          EOF
 
       - name: Install dependencies
         run: composer install
