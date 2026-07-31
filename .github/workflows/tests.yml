@@ -64,7 +64,7 @@ jobs:
           echo "OCI_MEMORY=6" >> .env
           echo "OCI_AVAILABILITY_DOMAIN=" >> .env
           echo "OCI_IMAGE_ID=" >> .env
-          echo "OCI_SSH_PUBLIC_KEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAhsDy1Hx1N/QTyO2qVRWdBGnyxEHKEzg9z+aj2unmXH71d7l6u62lMOlQJw0OW/rV28NkBp86gbHpSLDrjM/aAukaaxbGgoVtwGRxmOgr8fGk8mYfNhJn1kkrRhmdUL4AZ37CiVigO8A8q+V7i2k9EV5W9+5augm3S3C1O1Yfs32/muPMjoKONl5rAXnLe6chfKfajPcbXJ3wfqHgx3gRwH/5mjB0VM4wfPpQnS6fSZKKERDZEB51TEubvpnzoTh+3MKXUk+xD13b16A0Q/zLSNdDxBAywtYQEGFN0qXBWsM6fCUNiiakOhyOeDlyDP7g3dH+B8P2/TzekqFY94tT home@IQBAL" >> .env
+          echo "OCI_SSH_PUBLIC_KEY=/"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAhsDy1Hx1N/QTyO2qVRWdBGnyxEHKEzg9z+aj2unmXH71d7l6u62lMOlQJw0OW/rV28NkBp86gbHpSLDrjM/aAukaaxbGgoVtwGRxmOgr8fGk8mYfNhJn1kkrRhmdUL4AZ37CiVigO8A8q+V7i2k9EV5W9+5augm3S3C1O1Yfs32/muPMjoKONl5rAXnLe6chfKfajPcbXJ3wfqHgx3gRwH/5mjB0VM4wfPpQnS6fSZKKERDZEB51TEubvpnzoTh+3MKXUk+xD13b16A0Q/zLSNdDxBAywtYQEGFN0qXBWsM6fCUNiiakOhyOeDlyDP7g3dH+B8P2/TzekqFY94tT home@IQBAL" >> .env
 
       - name: Install dependencies
         run: composer install
