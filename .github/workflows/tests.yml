@@ -64,7 +64,7 @@ jobs:
           OCI_OCPUS=2
           OCI_MEMORY=6
           OCI_AVAILABILITY_DOMAIN=
-          OCI_IMAGE_ID=ocid1.image.oc1.ap-batam-1.aaaaaaaawmshcce7mpxp2i3z2kxlvx4p3u3cazkpyqvxmznw4p5f3q
+          OCI_IMAGE_ID=ocid1.image.oc1.ap-batam-1.aaaaaaaak44p4pwtbxkyqsc54l62q3e4mwn2mghyqslx5fyrdskp6yq2f3ra
           OCI_SSH_PUBLIC_KEY="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDhDyH1X1N/QTy02qVRWdBGnyxEHKeZ9z+aj2unmXH71d716u621M01QJw0W/rv28NKbP86gbHpSLDrjM/aAukaaxbGgovVwGRxmOgr8fK8mYfNhJn1kkrRhdUL4AZ37CiVig08A8q+V7i2k9EW5W9+5augm3S3C101Yfs32/muPMjoKON15rAXnLe6chKfajPcBXJ3wfQhgX3GrWh/5jB0VM4wfPQnS6fZKKERDZEB51TeUbvpnzoTh+3MKXUk+xD13b16A0Q/zLSNdDxBAywTYQEFN0qXBsW6fCUNiiakOhYOeD1yDP7g3dH+B8P2/TzekqFY94tT home@IQBAL"
           EOF
 
